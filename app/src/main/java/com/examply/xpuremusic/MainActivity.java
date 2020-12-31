@@ -1,10 +1,20 @@
 package com.examply.xpuremusic;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import com.examply.architecture.ui.base.DataBindingConfig;
+import com.examply.xpuremusic.ui.base.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
+
+    @Override
+    protected void initViewModel() {
+
+    }
+
+    @Override
+    protected DataBindingConfig getDataBindingConfig() {
+        return null;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

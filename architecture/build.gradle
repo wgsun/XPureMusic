@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'androidx.navigation.safeargs'
 }
 
 android {
@@ -7,7 +8,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        minSdkVersion 26
+        minSdkVersion 25
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -22,6 +23,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    //启用数据绑定
+    buildFeatures {
+        dataBinding true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -32,9 +39,26 @@ dependencies {
 
     //Android支持库
     api 'androidx.appcompat:appcompat:1.2.0'
-    //implementation 'com.google.android.material:material:1.1.0'
+    //谷歌提供的UI控件库
+    api 'com.google.android.material:material:1.1.0'
 
-    //testImplementation 'junit:junit:4.+'
-    //androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    //androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //jetpack组件库
+    api 'androidx.lifecycle:lifecycle-viewmodel:2.1.0'
+
+    def nav_version = "2.3.2"
+    api "androidx.navigation:navigation-fragment:$nav_version"
+    api "androidx.navigation:navigation-ui:$nav_version"
+    api 'androidx.navigation:navigation-runtime:2.3.1'
+
+
+    //单元测试依赖库
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //开源播放器
+    api 'com.kunminx.player:player:1.1.6'
+    //数据访问库
+    api 'com.kunminx.archi:domain:1.0.1'
+
 }
