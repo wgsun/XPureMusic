@@ -26,6 +26,10 @@ android {
         sourceCompatibility rootProject.ext.sourceCompatibilityVersion
         targetCompatibility rootProject.ext.targetCompatibilityVersion
     }
+
+    buildFeatures {
+        dataBinding true
+    }
 }
 
 dependencies {
