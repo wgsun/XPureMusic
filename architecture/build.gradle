@@ -43,7 +43,11 @@ dependencies {
     api 'com.google.android.material:material:1.1.0'
 
     //jetpack组件库
-    api 'androidx.lifecycle:lifecycle-viewmodel:2.1.0'
+    api 'androidx.lifecycle:lifecycle-runtime:2.2.0'
+    api 'androidx.lifecycle:lifecycle-common-java8:2.2.0'
+
+    api 'androidx.lifecycle:lifecycle-viewmodel:2.2.0'
+
 
     def nav_version = "2.3.2"
     api "androidx.navigation:navigation-fragment:$nav_version"
