@@ -1,5 +1,7 @@
 package com.examply.xpuremusic.ui.base;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.animation.Animation;
@@ -52,5 +54,11 @@ public abstract class BaseFragment extends DataBindingFragment {
 
     protected void loadInitData() {
 
+    }
+
+    protected void openUrlInBrowser(String url) {
+        Uri uri = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 }

@@ -1,10 +1,12 @@
 package com.examply.xpuremusic.ui.base;
 
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.examply.architecture.data.response.manager.NetworkStateManager;
 import com.examply.architecture.ui.base.DataBindingActivity;
+import com.examply.architecture.utils.BarUtils;
 
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModel;
@@ -18,8 +20,8 @@ public abstract class BaseActivity extends DataBindingActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        //BarUtils.setStatusBarColor(this, Color.TRANSPARENT);
-        //BarUtils.setStatusBarLightMode(this, true);
+        BarUtils.setStatusBarColor(this, Color.TRANSPARENT);
+        BarUtils.setStatusBarLightMode(this, true);
         super.onCreate(savedInstanceState);
         getLifecycle().addObserver(NetworkStateManager.getInstance());
     }

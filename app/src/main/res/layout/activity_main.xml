@@ -13,27 +13,13 @@
             type="com.examply.xpuremusic.MainActivity.EventHandler" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-    <!--<androidx.drawerlayout.widget.DrawerLayout
+    <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/dl"
         allowDrawOpen="@{vm.allowDrawerOpen}"
         bindDrawerListener="@{event}"
         isOpenDrawer="@{vm.openDrawer}"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <fragment
-            android:id="@+id/main_fragment_host"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:fitsSystemWindows="true"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/nav_drawer" />
 
         <fragment
             android:id="@+id/drawer_fragment_host"
@@ -46,6 +32,6 @@
             app:navGraph="@navigation/nav_drawer" />
 
 
-    </androidx.drawerlayout.widget.DrawerLayout>-->
+    </androidx.drawerlayout.widget.DrawerLayout>
 
 </layout>
